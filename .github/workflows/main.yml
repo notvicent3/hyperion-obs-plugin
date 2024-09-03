@@ -291,19 +291,19 @@ jobs:
           echo "FILE_NAME=${env:FILE_NAME}" >> ${env:GITHUB_ENV}
 
       - name: 'Retrieve x86 build files'
-        uses: actions/download-artifact@v3.0.2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: windows-x86
           path: ./release
 
       - name: 'Retrieve x64 build files'
-        uses: actions/download-artifact@v3.0.2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: windows-x64
           path: ./release
 
       - name: 'Retrieve installer files'
-        uses: actions/download-artifact@v3.0.2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: 'installer-files'
           path: .
@@ -344,7 +344,7 @@ jobs:
 
       # Download artifacts from previous build process
       - name: 'Download artifacts'
-        uses: actions/download-artifact@v3.0.2
+        uses: actions/download-artifact@v4.1.7
         with:
           path: artifacts
 
